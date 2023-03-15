@@ -7,9 +7,16 @@ export default class Details extends Component {
   render() {
     return (
       <ProductConsumer>
-        {(value) => {
-          const { id, company, img, info, price, title, inCart } =
-            value.detailProduct;
+        {value => {
+          const {
+            id,
+            company,
+            img,
+            info,
+            price,
+            title,
+            inCart
+          } = value.detailProduct;
 
           return (
             <div className="container py-5">
@@ -43,9 +50,7 @@ export default class Details extends Component {
                   {/* buttons */}
                   <div>
                     <Link to="/">
-                      <ButtonContainer className="back-to-products">
-                        back to products
-                      </ButtonContainer>
+                      <ButtonContainer className="back-to-products">back to products</ButtonContainer>
                     </Link>
                     <ButtonContainer
                       cart
